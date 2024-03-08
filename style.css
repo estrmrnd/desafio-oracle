@@ -20,7 +20,6 @@ body{
 .apresentacao{
     margin: 4%;
     display: flex;
-    /* flex-direction: center; */
     max-width: 1160px;
 }
 
@@ -139,9 +138,7 @@ textarea::placeholder{
 
 @media screen and (max-width: 768px) {
     .apresentacao {
-        display: flex;
-        /* flex-direction: column; */
-        align-items: center;
+        flex-direction: column;
         padding-left: 0;
     }
 
@@ -163,12 +160,12 @@ textarea::placeholder{
 
     .apresentacao__botoes {
         flex-direction: column;
-        height: calc(100% - 48px);
-        width: 100vh;
+        width: 100%;
     }
 
     .container {
         justify-content: center;
     }
     
+
 }
