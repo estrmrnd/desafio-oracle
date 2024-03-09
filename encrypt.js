@@ -1,7 +1,7 @@
-const textArea = document.querySelector("textarea");
-const mensagem = document.querySelector("#mensagem");
-const imgLupa = document.querySelector('.imagem-lupa');
-const exibicaoText = document.querySelector('retangulo');
+const textArea = document.querySelector("#textarea");
+const mensagem = document.querySelector(".mensagem");
+const imgLupa = document.querySelector(".boneco");
+const exibicaoText = document.querySelector("#retangulo");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -11,12 +11,12 @@ const exibicaoText = document.querySelector('retangulo');
 // A letra "u" é convertida para "ufat"
 
 function esconderMensagemDeNaoEncontrado() {
-    imgLupa.style.display = 'none'
+    boneco.style.display = 'none'
     exibicaoText.style.display = 'none'
 }
 
 function mostrarMensagemDeNaoEncontrado() {
-    imgLupa.style.display = 'block'
+    boneco.style.display = 'block'
     exibicaoText.style.display = 'block'
 }
 
@@ -24,6 +24,8 @@ function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensagem.value = textoEncriptado;
     textArea.value = "";
+
+    console.log("botão")
 }
 
 function btnDesencriptar() {
@@ -33,7 +35,7 @@ function btnDesencriptar() {
 }
 
 function copiarTexto() {
-    let texto = document.querySelector("#mensagem");
+    let texto = document.querySelector(".mensagem");
     mensagem.select();
     document.execCommand("copy");
     mensagem.value = "";

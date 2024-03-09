@@ -13,7 +13,7 @@
 
     <main class="apresentacao">
         <section class="apresentacao__sessao">
-            <textarea placeholder="Digite o texto aqui"  rows="10" cols="50"></textarea>
+            <textarea id="textarea" placeholder="Digite o texto aqui"  rows="10" cols="50"></textarea>
             
             <div class="exclamacao">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,8 +23,8 @@
             </div>
 
             <div class="apresentacao__botoes">
-                <a class="apresentacao__botoes__cripto">Criptografar</a>
-                <a class="apresentacao__botoes__descripto">Descriptografar</a>
+                <button id="botaoEncriptar" class="apresentacao__botoes__cripto">Criptografar</button>
+                <button onclick="btnDesencriptar()" class="apresentacao__botoes__descripto">Descriptografar</button>
             </div>
         </section>
 
@@ -44,5 +44,21 @@
     <footer>
 
     </footer>
+
+    <!-- <script src="encrypt.js"> 
+    const botaoEncriptar = document.getElementById("botaoEncriptar");
+    botaoEncriptar.addEventListener("click", function(){
+        btnEncriptar()
+    });
+    </script> -->
+
+    <script src="encrypt.js">
+        const encriptBotao = document.getElementById('botaoEncriptar');
+        encriptBotao.onclick = function () {
+        btnEncriptar(); // Chama a função definida em encrypt.js
+  };
+
+    </script>
+
 </body>
 </html>
