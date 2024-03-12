@@ -25,7 +25,7 @@ function btnEncriptar() {
     mensagem.value = textoEncriptado;
     textArea.value = "";
 
-    console.log("botão")
+    console.log("botao")
 }
 
 function btnDesencriptar() {
@@ -71,4 +71,5 @@ function desencriptar(stringDesencriptada) {
 
     esconderMensagemDeNaoEncontrado();
 
-    // return stringDesencriptada;
+    return stringDesencriptada;
+}
