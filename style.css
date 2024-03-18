@@ -40,12 +40,15 @@ textarea{
     border: none;
     resize: none;
     outline-style: none;
+    margin-left: 30px;
     height: 55vh;
 }
 
 textarea::placeholder{
     color: #0A3871;
 }
+
+
 
 .exclamacao{
     display: flex;
@@ -90,7 +93,7 @@ textarea::placeholder{
 
 
 .btn-copiar{
-    background-color: #D8DFE8;
+    background-color:white;
     color:#0A3871;
     border-radius: 24px;
     font-family: 'Inter', sans-serif;
@@ -119,7 +122,7 @@ textarea::placeholder{
     height: 304px;   
 }
 
-#retangulo{
+.retangulo{
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -210,8 +213,12 @@ textarea::placeholder{
     .container {
         justify-content: center;
     }
+
+    textarea{
+        text-align: center;
+    }
     
-    #retangulo{
+    .retangulo{
         width: 63vw;
         height: 18.4vh;
         gap:16px;
