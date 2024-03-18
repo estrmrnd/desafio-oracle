@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Oracle</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Vector.png" type="image/x-icon">
 </head>
 <body>
     <header class="logo">
@@ -13,7 +14,7 @@
 
     <main class="apresentacao">
         <section class="apresentacao__sessao">
-            <textarea id="textarea" placeholder="Digite o texto aqui"  rows="10" cols="50"></textarea>
+            <textarea id="textarea" placeholder="Digite o texto aqui"></textarea>
             
             <div class="exclamacao">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,42 +24,35 @@
             </div>
 
             <div class="apresentacao__botoes">
-                <button id="botaoEncriptar" button onclick="btnEncriptar" class="apresentacao__botoes__cripto">Criptografar</button>
-                <button onclick="btnDesencriptar()" class="apresentacao__botoes__descripto">Descriptografar</button>
+                <button onclick="criptografar()" class="apresentacao__botoes__cripto">Criptografar</button>
+                <button onclick="descriptografar()" class="apresentacao__botoes__descripto">Descriptografar</button>
             </div>
         </section>
 
-        <div class="container" id="retangulo"> 
-            <img class="boneco" src="boneco.png">
-
-            <div class="mensagem">
-                <p>Nenhuma mensagem encontrada</p>
-            </div>
-            
-            <div class="digite-aqui">
-                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
-            </div>
+        <div id="output">
+                <div class="container" id="retangulo">
+                    <img class="boneco" src="boneco.png">
+                    <h4 class="mensagem">Nenhuma mensagem encontrada</h4>
+                    <h5 class="digite-aqui">Digite um texto que você deseja criptografar ou descriptografar.</h5>
+                </div>     
         </div>
+
+
     </main>
 
-    <footer>
-
+    <footer class="rodape">
+            <div class="icons">
+                <a href="www.linkedin.com/in/ester-miranda-454ab41b1"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://github.com/estrmrnd"><ion-icon name="logo-github"></ion-icon></a>
+                <h3>Desenvolvido por Ester Miranda.</h3>
+            </div>
     </footer>
+    
+    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- <script src="encrypt.js"> 
-    const botaoEncriptar = document.getElementById("botaoEncriptar");
-    botaoEncriptar.addEventListener("click", function(){
-        btnEncriptar()
-    });
-    </script> -->
-
-    <script src="encrypt.js">
-        const encriptBotao = document.getElementById('botaoEncriptar');
-        encriptBotao.onclick = function () {
-        btnEncriptar(); // Chama a função definida em encrypt.js
-  };
-
-    </script>
+    <script src="encrypt.js"></script>
 
 </body>
 </html>
